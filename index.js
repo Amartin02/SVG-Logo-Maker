@@ -40,15 +40,18 @@ inquirer
 function createLogo(userChoices) {
   if (userChoices.logoShape === "Square") {
     return `<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
-      <rect width="150" height="150" x="10" y="10" style="fill:${userChoices.logoColor};" />
+      <rect width="150" height="150" x="75" y="25" style="fill:${userChoices.logoColor};" />
       Sorry, your browser does not support inline SVG.  
-      <text x="75" y="90" fill="${userChoices.textColor}">${userChoices.logoText}</text></svg>`;
+      <text style="font-size: 75px" x="100" y="125" fill="${userChoices.textColor}">${userChoices.logoText}</text></svg>`;
   } else if (userChoices.logoShape === "Circle") {
-    return `<svg height="300" width="200" xmlns="http://www.w3.org/2000/svg">
-    <circle r="45" cx="50" cy="50" fill="${userChoices.logoColor}" />
+    return `<svg height="200" width="300" xmlns="http://www.w3.org/2000/svg">
+    <circle r="95" cx="150" cy="100" fill="${userChoices.logoColor}" />
     Sorry, your browser does not support inline SVG.  
-    <text x="40" y="55" fill="${userChoices.textColor}">${userChoices.logoText}</text></svg> `;
+    <text style="font-size: 75px" x="100" y="125" fill="${userChoices.textColor}">${userChoices.logoText}</text></svg> `;
   } else if (userChoices.logoShape === "Triangle") {
-    return `<svg height="300" width="200"><polygon points="75,75 25,75 50,25" fill="${userChoices.logoColor}"  transform="  scale(1)"></polygon><text><text x="41" y="55" fill="${userChoices.textColor}">${userChoices.logoText}</text></svg>`;
+    return `<svg height="200" width="300" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="150,15 250,190 50,190" style="fill:${userChoices.logoColor}"/>
+    Sorry, your browser does not support inline SVG.
+    <text style="font-size: 75px" x="100" y="175" fill="${userChoices.textColor}">${userChoices.logoText}</text></svg>`;
   }
 }
